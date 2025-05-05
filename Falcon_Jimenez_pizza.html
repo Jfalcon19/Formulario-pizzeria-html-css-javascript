@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jesus Falcon Jimenez">
+        <title>Pizzería Falcon</title>
+        <link rel="stylesheet" href="Falcon_Jimenez_pizza.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <button id="modoBtn">Modo Oscuro/Claro</button>
+        
+        <header>
+            <img src="pizza-logo.png" alt="Logo Pizzería" class="logo">
+            <h1>Pizzería Falcon</h1>
+        </header>
+
+        <form id="formularioPizza">
+            <fieldset>
+                <legend>Datos de entrega</legend>
+                <div class="form-group">
+                    <label for="nombre">Nombre*:</label>
+                    <input placeholder="**********" type="text" id="nombre" required>
+                    <div id="errorNombre" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección*:</label>
+                    <input placeholder="**********" type="text" id="direccion" required>
+                    <div id="errorDireccion" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono*:</label>
+                    <input placeholder="********** (9 dígitos)" type="tel" id="telefono" required>
+                    <div id="errorTelefono" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*:</label>
+                    <input placeholder="**********@****" type="email" id="email" required>
+                    <div id="errorEmail" class="error-message"></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tipo de pizza</legend>
+                <div class="form-group">
+                    <label>Tamaño*:</label>
+                    <div class="opciones">
+                        <label><input type="radio" name="tamano" value="pequena" required> Pequeña (5€)</label>
+                        <label><input type="radio" name="tamano" value="mediana"> Mediana (10€)</label>
+                        <label><input type="radio" name="tamano" value="grande"> Grande (15€)</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Ingredientes adicionales:</label>
+                    <div class="opciones ingredientes">
+                        <label class="ingrediente"><input type="checkbox" name="ingredientes" value="cebolla"> Cebolla (1€)</label>
+                        <label class="ingrediente"><input type="checkbox" name="ingredientes" value="champis"> Champis (1€)</label>
+                        <label class="ingrediente"><input type="checkbox" name="ingredientes" value="atun"> Atún (1.5€)</label>
+                        <label class="ingrediente"><input type="checkbox" name="ingredientes" value="pepperoni"> Pepperoni (1€)</label>
+                        <label class="ingrediente"><input type="checkbox" name="ingredientes" value="bacon"> Bacon (1€)</label>
+                        <label class="ingrediente"><input type="checkbox" name="ingredientes" value="ternera"> Ternera (1.5€)</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Observaciones</legend>
+                <div class="form-group">
+                    <label for="observaciones">Instrucciones especiales (máx. 200 caracteres):</label>
+                    <textarea id="observaciones" placeholder="EJEMPLO: 'Hora de entrega: 22:00. Te espero en la puerta, no me funciona el telefonillo'" maxlength="200"></textarea>
+                    <div id="contador">0/200 caracteres</div>
+                </div>
+            </fieldset>
+
+            <div class="total" id="totalPedido">Total: 0€</div>
+
+            <button type="submit" class="btn-pedido">Realizar pedido</button>
+        </form>
+    </div>
+
+    <script src="Falcon_Jimenez_pizza.js"></script>
+</body>
+</html>

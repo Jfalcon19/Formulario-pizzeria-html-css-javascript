@@ -1,0 +1,181 @@
+/*Importación de fuente para usarlo en el h1*/
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+/*Modo predefinido/blanco*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: xx-large;
+    color: #e74c3c;
+    margin: 0;
+    font-family: 'Paytone One', sans-serif;
+}
+
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opciones label {
+    font-weight: normal;
+}
+
+.ingredientes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.ingrediente {
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+/*Cuando el usuario pasa el ratón sobre los diferentes ingredientes, debe cambiar de color.*/
+/*Cuando el ratón sale, debe volver a su color original.*/
+.ingrediente:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#contador {
+    text-align: right;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px 0;
+    color: #e74c3c;
+}
+
+.btn-pedido {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-pedido:hover {
+    background-color: #a01000;
+}
+
+#modoBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.error {
+    border-color: red !important;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/*Modo alternativo/oscuro*/
+body.modo-oscuro {
+    background-color: #333;
+    color: #eee;
+}
+
+body.modo-oscuro .container {
+    background-color: #444;
+}
+
+body.modo-oscuro fieldset {
+    border-color: #555;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea {
+    background-color: #555;
+    color: #fff;
+    border-color: #666;
+}
+
+body.modo-oscuro .ingrediente:hover {
+    background-color: #c0392b;
+}
+
+body.modo-oscuro .total {
+    color: #c0392b;
+}
